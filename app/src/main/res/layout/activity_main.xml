@@ -1,52 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/editTitle"
+        android:id="@+id/titleEditText"
         android:hint="일정 제목"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <EditText
-        android:id="@+id/editDesc"
+        android:id="@+id/descEditText"
         android:hint="일정 내용"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"/>
 
+<!--    <Button-->
+<!--        android:id="@+id/saveButton"-->
+<!--        android:text="일정 저장"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="12dp" />-->
     <Button
-        android:id="@+id/btnAdd"
-        android:text="일정 추가"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <Button
-        android:id="@+id/btnLoad"
-        android:text="일정 불러오기"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/textResult"
+        android:id="@+id/deleteButton"
+        android:text="선택한 일정 삭제"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:paddingTop="20dp"/>
+        android:layout_marginTop="8dp"/>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/scheduleRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/scheduleRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="right"/>
 </LinearLayout>
